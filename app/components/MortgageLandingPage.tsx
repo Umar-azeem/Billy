@@ -1,14 +1,12 @@
 "use client";
 import { useState } from "react";
-import  { NavigationMenuDemo } from "./NavigationMenuDemo";
-import Image from "next/image";
 
 const Icon = ({ src, size = 20, className = "" }: { src: string; size?: number; className?: string }) => (
   <img src={src} width={size} height={size} className={className} alt="" />
 );
 
 const MortgageLandingPage = () => {
-    const [educationOpen, setEducationOpen] = useState(false);
+  const [educationOpen, setEducationOpen] = useState(false);
 
   const icons = {
     phone: "https://img.icons8.com/ios/50/ffffff/phone.png",
@@ -19,10 +17,11 @@ const MortgageLandingPage = () => {
     instagram: "https://img.icons8.com/ios/50/374151/instagram-new.png",
     linkedin: "https://img.icons8.com/ios-filled/50/374151/linkedin.png",
     youtube: "https://img.icons8.com/ios-filled/50/374151/youtube-play.png",
+    google: "https://img.icons8.com/ios-filled/50/374151/google-logo.png",
   };
 
   return (
-    <div className="p-2">
+    <div className="">
       {/* overflow-y-scroll custom-scroll */}
       <div className="rounded-3xl bg-[#006132] text-white font-sans overflow-hidden relative ">
         <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none hidden md:block">
@@ -35,12 +34,12 @@ const MortgageLandingPage = () => {
             />
           </svg>
         </div>
-       
-         <main className="relative z-10 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center px-4 sm:px-6 lg:px-8 pt-18 pb-20 gap-10">
+
+        <main className="relative z-10 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center px-4 sm:px-6 lg:px-8 pt-18 pb-20 gap-10">
           <div className="flex-1  max-w-2xl w-full text-center lg:text-left">
             <div className="hidden md:flex flex-col ">
               <p className=" text-md font-bold tracking-[0.2em] mb-6 uppercase">
-                Hi, I{`'`}m Billy
+                Hi, I{`'`}m Billy Watkins
               </p>
 
               <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6">
@@ -50,29 +49,22 @@ const MortgageLandingPage = () => {
               </h1>
             </div>
             <p className="text-sm sm:text-base text-gray-200 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Your personal mortgage guide on your quest to becoming a
-              homeowner. Click the links below to start your journey with me.
+              Whether you{`'`}re purchasing your first home, refinancing, or
+              investing in commercial real estate, we{`'`}ll help you secure the
+              right financing strategy with confidence.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-4">
-              <button
-                className="w-full sm:w-auto flex items-center justify-center gap-3 bg-white text-black px-6 py-4 rounded-xl font-bold transition transform duration-300 hover:-translate-y-1"
-              >
-                <img
-                  src="https://cdn.prod.website-files.com/65d509901b89bb3fd2a62af7/65d509901b89bb3fd2a62b25_ic-calendar-white.svg"
-                  alt="Calendar"
-                />
-                Schedule Intro Call
-              </button>
-              <button
-                className="w-full sm:w-auto flex items-center justify-center gap-3 border-2 border-white/30 px-6 py-4 rounded-xl font-semibold transition transform duration-300 hover:-translate-y-1"
-              >
-                Quick Contact
+              <button className="w-full sm:w-auto flex items-center border-2 border-white/30 justify-center gap-3  px-6 py-4 rounded-xl font-bold transition transform duration-300 hover:-translate-y-1">
+                Start Application{" "}
                 <img
                   src="https://cdn.prod.website-files.com/65d509901b89bb3fd2a62af7/65d509901b89bb3fd2a62b0d_ic-arrow-forward-white.svg"
                   alt="arrow"
                 />
               </button>
+              <a href="/cobntact"><button className="w-full sm:w-auto flex items-center bg-white text-black justify-center gap-3  px-6 py-4 rounded-xl font-semibold transition transform duration-300 hover:-translate-y-1">
+             Quick Contact   
+              </button></a>
             </div>
           </div>
 
@@ -94,69 +86,62 @@ const MortgageLandingPage = () => {
             <div className="  relative w-full max-w-[450px]">
               <div className="flex flex-col text-center p-6 md:hidden">
                 <p className="text-md font-bold tracking-[0.2em] mb-6 uppercase">
-                  Hi, I{`'`}m Billy 
+                  Hi, I{`'`}m Billy Watkins{" "}
                 </p>
 
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-6">
-                  Your Local
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-2">
+                  Mortgage Solutions
                   <br />
-                  Mortgage Expert
+                  Built Around Your Goals
                 </h1>
               </div>
-               <Image
-          src="/img/billyr.png"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-          className="w-full h-[400px] sm:h-[480px] lg:h-[550px] object-cover object-top rounded-2xl"
+
+              <img
+                src="/img/billyc.png"
+                alt="Adrian Webb"
+                className="w-full h-[400px] sm:h-[480px] lg:h-[550px] object-cover object-top rounded-2xl"
                 style={{
                   maskImage:
                     "linear-gradient(to bottom, black 80%, transparent 100%)",
                   WebkitMaskImage:
                     "linear-gradient(to bottom, black 80%, transparent 100%)",
                 }}
-        />
-              {/* <img
-                src="https://cdn.prod.website-files.com/65d509901b89bb3fd2a62b18/65d510dfb82945f90c2aa788_Adrian%20Webb%20WMS-p-1080.png"
-                alt="Adrian Webb"
-                
-              /> */}
+              />
 
-              <div className="absolute bottom-4 sm:bottom-8 right-0 left-0 sm:left-auto mx-auto sm:mx-0 bg-white text-gray-900 p-5 sm:p-6 rounded-2xl shadow-2xl w-[88%] sm:w-64">
-                <h3 className="text-xl font-bold mb-2">Billy </h3>
+              <div className="absolute -bottom-6 sm:bottom-1 right-0 md:right-22 left-0 sm:left-auto mx-auto sm:mx-0 bg-white text-gray-900 p-5 sm:p-6 rounded-2xl shadow-2xl w-[88%] sm:w-64">
+                <h3 className="text-xl font-bold mb-2">Billy Watkins</h3>
                 <p className="text-gray-600 text-sm mb-1">
                   Senior Mortgage Advisor
                 </p>
-                <p className="text-gray-500 text-xs mb-1">NMLS ID: 811655</p>
-                <p className="text-gray-500 text-xs mb-4">
-                  NMLS CO ID: 1815656
-                </p>
-
-                <div className="flex items-center gap-3">
+                <p className="text-gray-500 text-xs mb-1">NMLS ID: 384700</p>
+                <div className="flex items-center gap-3 w-full">
                   <a
-                    href="#"
-                    className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition"
+                    href="https://facebook.com/BillyWatkinsMortgage"
+                    className="w-9 h-8 md:w-10 md:h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition"
                   >
-                    <Icon src={icons.facebook} size={18} className="text-black" />
+                    <Icon
+                      src={icons.facebook}
+                      size={18}
+                      className="text-black"
+                    />
                   </a>
                   <a
-                    href="#"
-                    className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition"
+                    href="https://instagram.com/BillyWatkinsMortgage"
+                    className="w-9 h-8 md:w-10 md:h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition"
                   >
                     <Icon src={icons.instagram} size={18} />
                   </a>
                   <a
-                    href="#"
-                    className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition"
+                    href="https://linkedin.com/in/BillyWatkinsMortgage"
+                    className="w-9 h-8 md:w-10 md:h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition"
                   >
                     <Icon src={icons.linkedin} size={18} />
                   </a>
                   <a
-                    href="#"
-                    className=" w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition"
+                    href="https://share.google/58EeohLOQ10kKQ6Y2"
+                    className=" w-9 h-8 md:w-10 md:h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition"
                   >
-                    <Icon src={icons.youtube} size={18} />
+                    <Icon src={icons.google} size={18} />
                   </a>
                 </div>
               </div>

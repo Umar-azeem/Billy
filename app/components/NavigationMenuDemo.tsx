@@ -6,11 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   Menu,
-  Calendar,
-  FileText,
   Home,
   Info,
-  LayoutGrid,
   BookOpen,
   Phone,
   Home as HomeIcon,
@@ -26,6 +23,7 @@ import {
   Lock,
   Activity,
   PhoneCall,
+  SquareArrowOutUpRight,
 } from "lucide-react";
 
 import {
@@ -35,7 +33,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
@@ -129,7 +126,7 @@ const mobileLoanLinks = loanPrograms.map((p) => ({
   icon: p.icon,
 }));
 
-export function NavigationMenuDemo() {
+ function NavigationMenuDemo() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [mobileLoanOpen, setMobileLoanOpen] = useState(false);
@@ -151,15 +148,47 @@ export function NavigationMenuDemo() {
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
             <Button
-              variant="ghost"
+              variant="default"
               size="icon"
-              className="lg:hidden text-white hover:bg-white/10"
+              className="lg:hidden bg-white hover:bg-white my-2 rounded-full text-[#006132] h-10 w-10"
             >
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle menu</span>
+              <Menu className="h-10 w-10 text-2xl " />
             </Button>
           </SheetTrigger>
-
+          <div className="flex flex-row gap-2 mx-2">
+            <Link href="https://app.mloflo.com/sl/:BillyWatkins " target="_blank">
+              {" "}
+              <Button
+                variant="default"
+                size="icon"
+                className="lg:hidden bg-white hover:bg-white my-2 rounded-full text-[#006132] h-10 w-10"
+              >
+                <SquareArrowOutUpRight className="h-10 w-10 text-2xl " />
+              </Button>
+            </Link>
+            <Button
+              variant="default"
+              size="icon"
+              className="lg:hidden bg-white hover:bg-white my-2 rounded-full text-[#006132] h-10 w-10"
+            >
+              <a
+                href="https://wa.me/15738815436"
+                target="_blank"
+                rel="noreferrer"
+                className="flex gap-2 justify-center w-full px-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-5 h-5 text-[#25D366]"
+                >
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.859L0 24l6.335-1.51A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.006-1.374l-.36-.214-3.732.889.939-3.63-.235-.374A9.818 9.818 0 1112 21.818z" />
+                </svg>
+              </a>
+            </Button>
+          </div>
           <SheetContent
             side="left"
             className="w-[300px] sm:w-[350px] bg-[#006132] text-white border-white/10 p-0 overflow-y-auto"
@@ -176,7 +205,7 @@ export function NavigationMenuDemo() {
                 />
               </Link>
             </div>
-
+            {/* mobile nav */}
             <nav className="flex flex-col gap-1 p-4">
               {navLinks.map((link) => (
                 <Link
@@ -235,9 +264,8 @@ export function NavigationMenuDemo() {
                 className="flex gap-2 justify-center w-full px-4"
               >
                 <button className="bg-white flex justify-center gap-4 text-[#006132] px-6 w-full py-3 rounded-xl font-semibold transition transform duration-300 hover:-translate-y-1">
-                 573-881-5436{" "}
+                  573-881-5436{" "}
                 </button>
-                
               </Link>
               <Link href="/" className="w-full px-4">
                 <button className="bg-white text-[#006132] px-6 w-full py-3 rounded-xl font-semibold transition transform duration-300 hover:-translate-y-1">
@@ -250,14 +278,25 @@ export function NavigationMenuDemo() {
 
         <div className="hidden lg:flex ">
           <NavigationMenu>
-            <NavigationMenuList className="gap-4  ">
-              <NavigationMenuItem className="text-white text-lg font-semibold">
-             <Link href="/about"> about</Link>  
-                <NavigationMenuContent>
-                </NavigationMenuContent>
+            <NavigationMenuList className="gap-1 ">
+              <div className="flex h-20 items-center  ">
+                <Link href="/" onClick={() => setIsOpen(false)}>
+                  <Image
+                    src="/img/logo.png"
+                    alt="Logo"
+                    width={100}
+                    height={100}
+                    className="w-36 h-28 object-contain"
+                    priority
+                  />
+                </Link>
+              </div>
+              <NavigationMenuItem className="text-white text-lg  rounded-xl font-semibold  transform duration-300 transition-all hover:bg-white/10 hover:-translate-y-1 px-6 py-2">
+                <Link href="/about"> about</Link>
+                <NavigationMenuContent></NavigationMenuContent>
               </NavigationMenuItem>
 
-              <NavigationMenuItem >
+              <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-white text-lg font-semibold ">
                   Loan Programs
                 </NavigationMenuTrigger>
@@ -288,12 +327,22 @@ export function NavigationMenuDemo() {
                       </li>
                     ))}
                   </ul>
-                  <div className="border-t border-border p-4">
-                  </div>
+                  <div className="border-t border-border p-4"></div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              <NavigationMenuItem className="text-white text-lg font-semibold">
-                  <Link href="/https://app.mloflo.com/sl/:BillyWatkins">Apply Now</Link>
+              <NavigationMenuItem className="text-white text-lg font-semibold rounded-xl transform duration-300 transition-all hover:bg-white/10 hover:-translate-y-1 px-6 py-2">
+                <Link href="/https://app.mloflo.com/sl/:BillyWatkins">
+                  Apply Now
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="text-white text-lg font-semibold rounded-xl transform duration-300 transition-all hover:bg-white/10 hover:-translate-y-1 px-6 py-2">
+                <Link href="/tools">Tools</Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="text-white text-lg font-semibold rounded-xl transform duration-300 transition-all hover:bg-white/10 hover:-translate-y-1 px-6 py-2">
+                <Link href="/review">Reviews</Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="text-white text-lg font-semibold rounded-xl transform duration-300 transition-all hover:bg-white/10 hover:-translate-y-1 px-6 py-2">
+                <Link href="/contact">Contact</Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -303,7 +352,7 @@ export function NavigationMenuDemo() {
             <PhoneCall />
             <h3>573-881-5436 </h3>
           </Link>
-          <Link href="/">
+          <Link href="https://app.mloflo.com/sl/:BillyWatkins">
             <button className="bg-white text-[#006132] px-6 py-3 rounded-xl font-semibold transition transform duration-300 hover:-translate-y-1">
               Apply Now
             </button>
@@ -333,3 +382,4 @@ function ListItem({
     </li>
   );
 }
+export default NavigationMenuDemo
