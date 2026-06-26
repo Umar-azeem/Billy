@@ -1,8 +1,9 @@
 import React from 'react'
+import Review from '../components/Review'
 
 function page() {
   return (
-    <div>page</div>
+    <Review/>
   )
 }
 

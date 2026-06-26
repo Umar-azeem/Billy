@@ -1,8 +1,9 @@
 import React from 'react'
+import Tools from '../components/tools'
 
 function page() {
   return (
-    <div>page</div>
+    <div><Tools/></div>
   )
 }
 

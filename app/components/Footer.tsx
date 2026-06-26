@@ -18,14 +18,10 @@ export default function Footer() {
         </h2>
 
         <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="border border-white bg-transparent rounded-2xl px-5 py-3 w-full sm:w-64 md:w-72 outline-none"
-          />
-          <button className="bg-green-700 px-6 py-3 rounded-xl transition-transform duration-300 hover:translate-y-1 w-full sm:w-auto">
-            Subscribe
-          </button>
+          
+         <Link href="/contact"><button className="bg-green-700 px-6 py-3 rounded-xl transition-transform duration-300 hover:translate-y-1 w-full sm:w-auto">
+           Contact us
+          </button></Link> 
         </div>
       </div>
 

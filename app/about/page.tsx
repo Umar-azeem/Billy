@@ -1,8 +1,9 @@
 import React from 'react'
+import AboutPage from '../components/about'
 
 function page() {
   return (
-    <div>page</div>
+    <div><AboutPage/></div>
   )
 }
 

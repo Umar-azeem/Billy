@@ -40,74 +40,74 @@ import { Button } from "@/components/ui/button";
 const loanPrograms = [
   {
     title: "FHA Loans",
-    href: "https://billywatkinsmortgage.com/loan-programs/fha-loans",
+    href: "/loan-programs?program=fha",
     description: "Government-backed loans with low down payment requirements.",
     icon: HomeIcon,
   },
   {
     title: "VA Home Loans",
-    href: "https://billywatkinsmortgage.com/loan-programs/va-home-loans",
+    href: "/loan-programs?program=va",
     description:
       "Exclusive benefits for veterans and active-duty service members.",
     icon: Shield,
   },
   {
     title: "Conventional Loans",
-    href: "https://billywatkinsmortgage.com/loan-programs/conventional-loans",
+    href: "/loan-programs?program=conventional",
     description: "Traditional mortgage options with competitive rates.",
     icon: Building2,
   },
   {
     title: "Jumbo Loans",
-    href: "https://billywatkinsmortgage.com/loan-programs/jumbo-loans",
+    href: "/loan-programs?program=jumbo",
     description: "Financing solutions for high-value properties.",
     icon: TrendingUp,
   },
   {
     title: "Refinance",
-    href: "https://billywatkinsmortgage.com/loan-programs/refinance",
+    href: "/loan-programs?program=refinance",
     description: "Lower your rate or tap into your home equity.",
     icon: RefreshCw,
   },
   {
     title: "HELOC",
-    href: "https://billywatkinsmortgage.com/loan-programs/heloc",
+    href: "/loan-programs?program=heloc",
     description: "Flexible home equity line of credit for ongoing needs.",
     icon: Landmark,
   },
   {
     title: "DSCR Investor Loans",
-    href: "https://billywatkinsmortgage.com/loan-programs/dscr-investor-loans",
+    href: "/loan-programs?program=dscr",
     description: "Qualify based on rental income, not personal income.",
     icon: BarChart3,
   },
   {
     title: "Bank Statement Loans",
-    href: "https://billywatkinsmortgage.com/loan-programs/bank-statement-loans",
+    href: "/loan-programs?program=bank-statement",
     description: "Perfect for self-employed borrowers using bank statements.",
     icon: FileTextIcon,
   },
   {
     title: "First-Time Home Buyer",
-    href: "https://billywatkinsmortgage.com/loan-programs/first-time-home-buyer",
+    href: "/loan-programs?program=first-time",
     description: "Tailored programs and guidance for first-time buyers.",
     icon: Key,
   },
   {
     title: "Debt Consolidation",
-    href: "https://billywatkinsmortgage.com/loan-programs/debt-consolidation",
+    href: "/loan-programs?program=debt-consolidation",
     description: "Simplify payments by combining debts into one loan.",
     icon: CreditCard,
   },
   {
     title: "Fixed-Rate Loans",
-    href: "https://billywatkinsmortgage.com/loan-programs/fixed-rate-loans",
+    href: "/loan-programs?program=fixed-rate",
     description: "Stable monthly payments with a locked-in interest rate.",
     icon: Lock,
   },
   {
     title: "Adjustable-Rate (ARM) Loans",
-    href: "https://billywatkinsmortgage.com/loan-programs/adjustable-rate-loans",
+    href: "/loan-programs?program=arm",
     description: "Start with lower rates that adjust over time.",
     icon: Activity,
   },
@@ -245,7 +245,7 @@ const mobileLoanLinks = loanPrograms.map((p) => ({
                       <a
                         key={link.href}
                         href={link.href}
-                        target="_blank"
+                        
                         rel="noreferrer"
                         onClick={() => setIsOpen(false)}
                         className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-white/70 transition-all hover:bg-white/10 hover:text-white"
@@ -298,7 +298,7 @@ const mobileLoanLinks = loanPrograms.map((p) => ({
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-white text-lg font-semibold ">
-                  Loan Programs
+                 <Link href="/loan-programs">Loan Programs</Link> 
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[640px] grid-cols-2 gap-1 p-4 lg:w-[780px] lg:grid-cols-3">
@@ -307,7 +307,7 @@ const mobileLoanLinks = loanPrograms.map((p) => ({
                         <NavigationMenuLink asChild>
                           <a
                             href={program.href}
-                            target="_blank"
+                            
                             rel="noreferrer"
                             className="flex items-start gap-3 rounded-lg p-3 text-sm transition-colors hover:bg-[#006132] hover:text-[#006132]-foreground group"
                           >
@@ -331,7 +331,7 @@ const mobileLoanLinks = loanPrograms.map((p) => ({
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem className="text-white text-lg font-semibold rounded-xl transform duration-300 transition-all hover:bg-white/10 hover:-translate-y-1 px-6 py-2">
-                <Link href="/https://app.mloflo.com/sl/:BillyWatkins">
+                <Link href="https://app.mloflo.com/sl/:BillyWatkins">
                   Apply Now
                 </Link>
               </NavigationMenuItem>
