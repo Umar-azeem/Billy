@@ -122,7 +122,7 @@ This inquiry was sent from the Billy Watkins Mortgage website.`,
           }}
         />
 
-        <div className="absolute inset-0 z-1 bg-gradient-to-b from-[#006132] to-[#006132]  opacity-65" />
+        <div className="absolute inset-0 z-1 bg-[#006132]   opacity-65" />
 
         <div className="relative z-10 max-w-4xl mx-auto  p-13">
           <p className="text-green-300 uppercase tracking-[4px] font-bold text-xs sm:text-sm mb-3">
@@ -164,7 +164,7 @@ This inquiry was sent from the Billy Watkins Mortgage website.`,
                   </h4>
                   <p className="text-gray-600 text-sm mt-1">
                     Get answers tailored to your situation, not a generic
-                    template email.
+                    template is email.
                   </p>
                 </div>
               </div>
@@ -172,11 +172,11 @@ This inquiry was sent from the Billy Watkins Mortgage website.`,
                 <CheckCircle2 className="text-[#006132] w-5 h-5 mt-1 shrink-0" />
                 <div>
                   <h4 className="font-medium text-sm sm:text-base">
-                    No Obligation, No Pressure
+                    No Obligation, No Pressure 
                   </h4>
                   <p className="text-gray-600 text-sm mt-1">
                     This is about discovery and planning. I&apos;m here to
-                    provide clarity, not a heavy sales pitch.
+                    provide clarity, not a heavy sales pitch .!
                   </p>
                 </div>
               </div>
