@@ -1,4 +1,3 @@
-// app/loan-programs/page.tsx
 "use client";
 
 import { Suspense } from "react";
@@ -7,7 +6,6 @@ import Link from "next/link";
 import * as Icons from "lucide-react";
 import { loanPrograms, LoanProgram } from "@/app/data/loanPrograms";
 
-// Helper function to safely get icon component
 const getIconComponent = (iconName: string): React.ComponentType<{ className?: string }> => {
   const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
     Shield: Icons.Shield,
@@ -27,13 +25,11 @@ const getIconComponent = (iconName: string): React.ComponentType<{ className?: s
   return iconMap[iconName] || Icons.HelpCircle;
 };
 
-// Helper to render icon
 const renderIcon = (iconName: string, className: string = "w-8 h-8 text-[#006132]") => {
   const Icon = getIconComponent(iconName);
   return <Icon className={className} />;
 };
 
-// Loading component
 function LoanProgramsLoading() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] pt-20 lg:pt-24">
@@ -59,13 +55,11 @@ function LoanProgramsLoading() {
   );
 }
 
-// Main content component
 function LoanProgramsContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const selectedId = searchParams.get("program");
   
-  // Directly compute selectedProgram from URL param
   const selectedProgram = loanPrograms.find((p) => p.id === selectedId);
 
   const handleProgramClick = (program: LoanProgram) => {
@@ -79,7 +73,6 @@ function LoanProgramsContent() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] pt-20 lg:pt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-8">
-        {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
             Loan Programs
@@ -89,7 +82,6 @@ function LoanProgramsContent() {
           </p>
         </div>
 
-        {/* Program Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {loanPrograms.map((program) => {
             const Icon = getIconComponent(program.icon);
@@ -111,10 +103,8 @@ function LoanProgramsContent() {
           })}
         </div>
 
-        {/* Detailed View (Modal-like section) */}
         {selectedProgram && (
           <div className="mt-12 bg-white rounded-xl shadow-lg border border-gray-200 p-6 md:p-8 relative animate-fadeIn">
-            {/* Close Button */}
             <button
               onClick={clearSelection}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
@@ -142,7 +132,6 @@ function LoanProgramsContent() {
                 </p>
               )}
 
-              {/* Key Features */}
               {selectedProgram.features && 
                Array.isArray(selectedProgram.features) && 
                selectedProgram.features.length > 0 && (
@@ -161,7 +150,6 @@ function LoanProgramsContent() {
                 </div>
               )}
 
-              {/* Ideal For */}
               {selectedProgram.idealFor && 
                Array.isArray(selectedProgram.idealFor) && 
                selectedProgram.idealFor.length > 0 && (
@@ -201,7 +189,6 @@ function LoanProgramsContent() {
         )}
       </div>
 
-      {/* Add animation styles */}
       <style jsx>{`
         @keyframes fadeIn {
           from {
@@ -221,7 +208,6 @@ function LoanProgramsContent() {
   );
 }
 
-// Main page component with Suspense
 export default function LoanProgramsPage() {
   return (
     <Suspense fallback={<LoanProgramsLoading />}>

@@ -27,13 +27,11 @@ const getIconComponent = (iconName: string): React.ComponentType<{ className?: s
   return iconMap[iconName] || Icons.HelpCircle;
 };
 
-// Helper to render icon
 const renderIcon = (iconName: string, className: string = "w-8 h-8 text-[#006132]") => {
   const Icon = getIconComponent(iconName);
   return <Icon className={className} />;
 };
 
-// Loading component
 function LoanProgramsLoading() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] pt-20 lg:pt-24">
@@ -89,7 +87,6 @@ function LoanProgramsContent() {
           </p>
         </div>
 
-        {/* Program Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {loanPrograms.map((program) => {
             const Icon = getIconComponent(program.icon);
@@ -111,10 +108,8 @@ function LoanProgramsContent() {
           })}
         </div>
 
-        {/* Detailed View (Modal-like section) */}
         {selectedProgram && (
           <div className="mt-12 bg-white rounded-xl shadow-lg border border-gray-200 p-6 md:p-8 relative animate-fadeIn">
-            {/* Close Button */}
             <button
               onClick={clearSelection}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
@@ -161,7 +156,6 @@ function LoanProgramsContent() {
                 </div>
               )}
 
-              {/* Ideal For */}
               {selectedProgram.idealFor && 
                Array.isArray(selectedProgram.idealFor) && 
                selectedProgram.idealFor.length > 0 && (
@@ -201,7 +195,6 @@ function LoanProgramsContent() {
         )}
       </div>
 
-      {/* Add animation styles */}
       <style jsx>{`
         @keyframes fadeIn {
           from {
@@ -221,7 +214,6 @@ function LoanProgramsContent() {
   );
 }
 
-// Main page component with Suspense
 export default function LoanProgramsPage() {
   return (
     <Suspense fallback={<LoanProgramsLoading />}>

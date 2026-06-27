@@ -3,10 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as Icons from "lucide-react";
-import { useState } from "react";
 
 export default function AboutPage() {
-  const [activeTab, setActiveTab] = useState("overview");
 
   const values = [
     {
@@ -92,9 +90,7 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 ">
-      {/* Hero Section with Background Image */}
       <div className="relative bg-gradient-to-r from-[#006132] to-[#004d26] text-white rounded-2xl">
-        {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 z-0 opacity-20"
           style={{
@@ -106,7 +102,6 @@ export default function AboutPage() {
         
         <div className="relative z-10 container mx-auto max-w-7xl px-4 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
             <div>
               <p className="text-green-300 font-bold tracking-[4px] text-sm mb-4">
                 Trusted Mortgage Advisor
@@ -132,18 +127,16 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Right Content - Billy's Image */}
             <div className="flex justify-center lg:justify-end">
               <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
-                <div className="absolute inset-0 rounded-full bg-green-700/30 animate-pulse" />
+                <div className="absolute inset-0 rounded-full bg-green-700/95 animate-pulse" />
                 <Image
-                  src="/img/billyc.png"
+                  src="/img/billyN.png"
                   alt="Billy Watkins - Trusted Mortgage Advisor"
                   fill
                   className="rounded-full object-cover border-4 border-white/20 shadow-2xl"
                   priority
                 />
-                {/* Badge */}
                 <div className="absolute -bottom-2 -right-2 bg-white rounded-full p-3 shadow-lg">
                   <Icons.BadgeCheck className="w-8 h-8 text-[#006132]" />
                 </div>
@@ -153,9 +146,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="container mx-auto max-w-7xl px-4 py-12 md:py-16">
-        {/* Meet Billy Section */}
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Meet Billy Watkins</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -178,7 +169,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Image Collage */}
             <div className="grid grid-cols-2 gap-3">
               <div className="col-span-2">
                 <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
@@ -219,7 +209,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Mission, Values & Client Promise */}
         <section className="mb-16 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
             Mission, Values & Client Promise
@@ -240,7 +229,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* What Sets My Process Apart */}
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">What Sets My Process Apart</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -265,7 +253,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Loan Programs */}
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Loan Programs & Expertise</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -278,7 +265,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Who I Serve */}
         <section className="mb-16 bg-[#006132] text-white rounded-2xl p-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Who I Serve</h2>
           <p className="text-center text-green-200 mb-8">I provide tailored solutions for a diverse range of clients, each with unique goals.</p>
@@ -301,7 +287,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Results & Case Studies */}
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Results & Case Studies</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -327,7 +312,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* How to Work With Me */}
         <section className="mb-16 bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">How to Work With Me</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -354,7 +338,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Service Areas */}
         <section className="mb-16 bg-gray-900 text-white rounded-2xl p-8">
           <h2 className="text-2xl md:text-3xl font-bold mb-4 text-center">Service Areas</h2>
           <p className="text-gray-300 text-center mb-6">
@@ -369,7 +352,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* FAQs */}
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -382,7 +364,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Mortgage Glossary */}
         <section className="mb-16">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Mortgage Glossary</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -1,9 +1,7 @@
-// app/loan-programs/page.tsx
 "use client"
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
 
-// Loading component
 function LoanProgramsLoading() {
   return (
     <div className="min-h-screen bg-[#F5F5F5] pt-20 lg:pt-24">
@@ -29,7 +27,6 @@ function LoanProgramsLoading() {
   );
 }
 
-// Dynamic import with SSR disabled
 const LoanProgramsContent = dynamic(
   () => import("./loan-programs-content"),
   { 

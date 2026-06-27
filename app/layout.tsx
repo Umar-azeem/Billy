@@ -31,7 +31,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <NavigationMenuDemo />
-        <main className="flex-1 p-0.5 md:p-1">
+        <main className="flex-1 p-2 md:p-2">
           {children}
         </main>
         <Footer />

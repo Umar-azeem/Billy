@@ -1,4 +1,7 @@
+import CardStack from "./components/Card";
 import Community from "./components/Community";
+import Consider from "./components/Consider";
+import CreditBuild from "./components/CreditBuild";
 import Education from "./components/Education";
 import FAQ from "./components/FAQ";
 import Loan from "./components/Loan";
@@ -10,8 +13,11 @@ export default function Home() {
    <>
    <MortgageLandingPage />
    <Community/>
+   {/* <Consider/> */}
    <Education/>
+   <CreditBuild/>
    <MortgageCalculator/>
+   <CardStack/>
    <Loan/>
    <FAQ/>
    </>

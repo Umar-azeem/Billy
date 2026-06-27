@@ -1,18 +1,15 @@
-// app/loan-programs/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import * as Icons from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { loanPrograms } from "@/app/data/loanPrograms";
 
-// Generate static paths for all programs
 export async function generateStaticParams() {
   return loanPrograms.map((program) => ({
     slug: program.id,
   }));
 }
 
-// Page component for individual program
 export default function LoanProgramDetailPage({
   params,
 }: {
@@ -31,7 +28,6 @@ export default function LoanProgramDetailPage({
   return (
     <div className="min-h-screen bg-[#F5F5F5] py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        {/* Back Button */}
         <Link
           href="/loan-programs"
           className="inline-flex items-center text-[#006132] hover:text-[#004d26] font-medium mb-8 transition group"
@@ -40,7 +36,6 @@ export default function LoanProgramDetailPage({
           Back to All Programs
         </Link>
 
-        {/* Main Content */}
         <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 md:p-8">
           <div className="flex items-center gap-4 mb-6">
             <div className="p-3 bg-[#006132]/10 rounded-full">

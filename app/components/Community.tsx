@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, ShieldCheck, Award, Calendar, PhoneCall } from "lucide-react";
+import { Mail, Phone, ShieldCheck, Award, Calendar, PhoneCall, Handshake } from "lucide-react";
 import Link from "next/link";
 
 
@@ -25,7 +25,7 @@ export default function Community() {
             needs.
           </p>
 
-        <Link href="/contact"> <button
+        <Link href="/contact-us"> <button
             className="bg-[#006132] w-full sm:w-auto flex items-center justify-center gap-3 text-white px-6 py-4 rounded-xl font-bold transition transform duration-300 hover:-translate-y-1"
           >
             Contact
@@ -53,66 +53,30 @@ export default function Community() {
           </div>
         </div>
 
-        <div className="bg-[#004D22] text-white p-6 sm:p-10 rounded-2xl shadow-xl border border-[#005C29] relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-2xl -mr-10 -mt-10" />
-          
-          <div className="relative z-10">
-            <p className="text-green-300 font-semibold tracking-wider text-xs sm:text-sm uppercase mb-2">
-              Loan Officer Profile
-            </p>
-            <h3 className="text-3xl sm:text-4xl font-bold mb-1 tracking-tight">
-              About Billy Watkins
-            </h3>
-            <p className="text-green-200 text-xs sm:text-sm font-medium mb-6">
-              NMLS #384700
-            </p>
+        <>
+        <div className="relative flex justify-center mt-4 lg:mt-0">
+          <img
+            src="/img/bk.png"
+            alt="Community"
+            className="w-full max-w-[500px] h-[250px] sm:h-[280px] lg:h-[300px] object-cover rounded-xl lg:rounded-none"
+          />
 
-            <h4 className="text-lg sm:text-xl font-semibold text-green-300 mb-3 border-b border-white/10 pb-2">
-              Guidance, clarity, and service you can trust
-            </h4>
+          <div className="absolute -bottom-10 sm:-bottom-12 left-1/2 -translate-x-1/2 bg-white rounded-[18px] sm:rounded-[22px] shadow-xl px-4 py-4 flex items-center gap-4 sm:gap-8 w-[90%] sm:w-[420px]">
+            <div className="text-2xl sm:text-3xl"><Handshake className=" text-[#ff9c78] h-8 w-8"/></div>
 
-            <div className="space-y-4 text-sm sm:text-base text-gray-100 leading-relaxed font-light">
-              <p>
-                With two decades in finance, I focus on clarity first—understanding your entire 
-                financial picture before recommending a loan. Expect proactive communication, 
-                organized milestones, and real timelines.
+            <div>
+              <p className="text-[15px] sm:text-[20px] italic text-black leading-relaxed">
+                Prefer To Meet One on One?
+                <br />
+                Schedule A Consultation Today!
               </p>
-              <p>
-                My background spans residential lending, income tax planning, audit, data analysis, 
-                and fraud &amp; forensic consulting. That blend of disciplines helps anticipate 
-                challenges before they impact your file.
-              </p>
-            </div>
-
-            <div className="mt-8 grid sm:grid-cols-2 gap-3">
-              <div className="flex items-center gap-3 bg-white/10 rounded-lg p-3 border border-white/5">
-                <ShieldCheck className="text-green-300 w-5 h-5 shrink-0" />
-                <span className="text-xs sm:text-sm font-medium">Dedicated Mortgage Guidance</span>
-              </div>
-              <div className="flex items-center gap-3 bg-white/10 rounded-lg p-3 border border-white/5">
-                <Award className="text-green-300 w-5 h-5 shrink-0" />
-                <span className="text-xs sm:text-sm font-medium">🎖 US Navy Veteran</span>
-              </div>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-white/10 grid gap-3 sm:grid-cols-2 text-sm">
-              <a 
-                href="mailto:Billy@billywatkinsmortgage.com" 
-                className="flex items-center gap-3 hover:text-green-200 transition break-all"
-              >
-                <Mail className="w-4 h-4 text-green-300 shrink-0" />
-                <span>Billy@billywatkinsmortgage.com</span>
-              </a>
-              <a 
-                href="tel:573-881-5436" 
-                className="flex items-center gap-3 hover:text-green-200 transition"
-              >
-                <Phone className="w-4 h-4 text-green-300 shrink-0" />
-                <span>573-881-5436</span>
-              </a>
             </div>
           </div>
         </div>
+        
+        </>
+
+       
 
       </div>
     </section>

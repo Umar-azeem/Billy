@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { 
-  ArrowRight, 
-  ChevronLeft, 
+import {
+  ArrowRight,
+  ChevronLeft,
   ChevronRight,
   Lock,
   TrendingUp,
@@ -16,7 +16,7 @@ import {
   TrendingDown,
   FileText,
   Users,
-  CreditCard
+  CreditCard,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -31,75 +31,86 @@ const loanProducts: LoanProduct[] = [
   {
     id: "/loan-programs?program=fixed-rate",
     title: "Fixed-Rate Loans",
-    description: "Lock in competitive rates and predictable payments for long-term financial stability.",
-    icon: <Lock className="w-6 h-6" />
+    description:
+      "Lock in competitive rates and predictable payments for long-term financial stability.",
+    icon: <Lock className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=arm",
     title: "Adjustable-Rate (ARM) Loans",
-    description: "Start with lower initial rates and payments, perfect for short-term homeowners.",
-    icon: <TrendingUp className="w-6 h-6" />
+    description:
+      "Start with lower initial rates and payments, perfect for short-term homeowners.",
+    icon: <TrendingUp className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=fha",
     title: "FHA Loans",
-    description: "Government-backed home loans with flexible credit requirements and down payments as low as 3.5%.",
-    icon: <Shield className="w-6 h-6" />
+    description:
+      "Government-backed home loans with flexible credit requirements and down payments as low as 3.5%.",
+    icon: <Shield className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=va",
     title: "VA Home Loans",
-    description: "Exclusive zero-down mortgage benefits for veterans and service members.",
-    icon: <Star className="w-6 h-6" />
+    description:
+      "Exclusive zero-down mortgage benefits for veterans and service members.",
+    icon: <Star className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=conventional",
     title: "Conventional Loans",
-    description: "Traditional mortgage financing with competitive rates, flexible terms, and down payments as low as 3%.",
-    icon: <Building className="w-6 h-6" />
+    description:
+      "Traditional mortgage financing with competitive rates, flexible terms, and down payments as low as 3%.",
+    icon: <Building className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=jumbo",
     title: "Jumbo Loans",
-    description: "High-value property financing that exceeds conventional loan limits.",
-    icon: <Home className="w-6 h-6" />
+    description:
+      "High-value property financing that exceeds conventional loan limits.",
+    icon: <Home className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=refinance",
     title: "Refinance",
-    description: "Lower your mortgage rate, reduce monthly payments, or access home equity.",
-    icon: <RefreshCw className="w-6 h-6" />
+    description:
+      "Lower your mortgage rate, reduce monthly payments, or access home equity.",
+    icon: <RefreshCw className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=heloc",
     title: "HELOC",
-    description: "Flexible home equity line of credit for major expenses or home improvements.",
-    icon: <LineChart className="w-6 h-6" />
+    description:
+      "Flexible home equity line of credit for major expenses or home improvements.",
+    icon: <LineChart className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=dscr",
     title: "DSCR Investor Loans",
-    description: "Investment property financing based on rental income potential, not personal income.",
-    icon: <TrendingDown className="w-6 h-6" />
+    description:
+      "Investment property financing based on rental income potential, not personal income.",
+    icon: <TrendingDown className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=bank-statement",
     title: "Bank Statement Loans",
-    description: "Self-employed mortgage solution using bank statements instead of tax returns.",
-    icon: <FileText className="w-6 h-6" />
+    description:
+      "Self-employed mortgage solution using bank statements instead of tax returns.",
+    icon: <FileText className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=first-time",
     title: "First-Time Home Buyer",
     description: "Specialized programs and guidance for first-time homebuyers.",
-    icon: <Users className="w-6 h-6" />
+    icon: <Users className="w-6 h-6" />,
   },
   {
     id: "/loan-programs?program=debt-consolidation",
     title: "Debt Consolidation",
-    description: "Use home equity to consolidate high-interest debts into one lower monthly payment.",
-    icon: <CreditCard className="w-6 h-6" />
-  }
+    description:
+      "Use home equity to consolidate high-interest debts into one lower monthly payment.",
+    icon: <CreditCard className="w-6 h-6" />,
+  },
 ];
 
 const LoanProductsCarousel: React.FC = () => {
@@ -143,27 +154,23 @@ const LoanProductsCarousel: React.FC = () => {
     <div className="w-full bg-[#F5F5F5] py-12 md:py-20 rounded-2xl mt-3 mb-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col lg:flex-row justify-between gap-10 items-start">
-          {/* Left Content */}
           <div className="w-full lg:w-[600px]">
             <p className="text-[#006132] text-center lg:text-left font-bold tracking-[4px] mb-6 text-sm">
               LOAN PROGRAMS
             </p>
-
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center lg:text-left leading-tight">
               Find Your Perfect Mortgage Solution
             </h1>
-
             <p className="text-gray-600 text-center lg:text-left mt-4 text-sm max-w-2xl">
-              Explore our comprehensive range of loan products designed to meet your unique financial needs and homeownership goals.
+              Explore our comprehensive range of loan products designed to meet
+              your unique financial needs and homeownership goals.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-3 mt-8 justify-center lg:justify-start">
-              <Link href="/contact">
+              <Link href="/contact-us">
                 <button className="bg-[#006132] hover:bg-[#004d26] text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition w-full sm:w-auto">
                   Get Started <ArrowRight size={18} />
                 </button>
               </Link>
-
               <Link href="/tools">
                 <button className="border border-gray-800 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 text-black transition w-full sm:w-auto">
                   Calculate Payments <ArrowRight size={18} />
@@ -171,38 +178,34 @@ const LoanProductsCarousel: React.FC = () => {
               </Link>
             </div>
           </div>
-
-          {/* Cards Carousel */}
-          <div className="w-full lg:w-[650px]">
-            <div className="overflow-hidden">
-              <div className="flex gap-6">
+          <div className="w-full lg:w-[650px] ">
+            <div className="overflow-hidden ">
+              <div className="flex gap-5">
                 {getVisibleItems().map((product) => (
                   <div
                     key={product.id}
-                    className="bg-[#006132]  text-white rounded-3xl p-6 flex flex-col flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] min-h-[280px]"
+                    className="min-w-[200px] h-[260px] md:min-w-[250px] md:h-[300px]  border-t-10 border-black bg-[#006132] text-white rounded-b-3xl p-4 md:p-6  flex flex-col justify-between flex-shrink-0"
                   >
-                    {/* Icon */}
-                    <div className="text-white mb-4">
-                      <div className="bg-white/20 rounded-full p-3 inline-block">
-                        {product.icon}
-                      </div>
+                    <div className="flex items-center  ">
+                      <img
+                        className="w-20 h-20 object-contain"
+                        src="/img/logo.png"
+                        alt="logo"
+                      />
+                      
                     </div>
 
-                    {/* Title */}
-                    <h3 className="text-lg font-bold mb-2 line-clamp-2">
-                      {product.title}
-                    </h3>
+                    <h2 className=" text-3xl font-bold max-w-[200px]  md:max-w-[240px]">
+                     {product.title}
+                    </h2>
 
-                    {/* Description */}
-                    <p className="text-sm text-white/90 mb-4 flex-grow line-clamp-4">
-                      {product.description}
-                    </p>
-
-                    {/* Learn More Link */}
                     <Link href={`${product.id}`}>
                       <button className="flex items-center gap-2 text-sm font-semibold underline hover:text-green-200 transition group">
-                        Learn More 
-                        <ArrowRight size={16} className="group-hover:translate-x-1 transition" />
+                        Learn More
+                        <ArrowRight
+                          size={16}
+                          className="group-hover:translate-x-1 transition"
+                        />
                       </button>
                     </Link>
                   </div>
@@ -210,8 +213,32 @@ const LoanProductsCarousel: React.FC = () => {
               </div>
             </div>
 
-            {/* Navigation */}
-            <div className="flex items-center justify-center gap-4 mt-6">
+            {/* <div
+                    key={product.id}
+                    className="bg-[#006132]  text-white rounded-3xl p-6 flex flex-col flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] min-h-[280px]"
+                  >
+                    <div className="text-white mb-4">
+                      <div className="bg-white/20 rounded-full p-3 inline-block">
+                        {product.icon} 
+                      </div>
+                    </div>
+
+                    <h3 className="text-lg font-bold mb-2 line-clamp-2">
+                      {product.title}
+                    </h3>
+
+                    <p className="text-sm text-white/90 mb-4 flex-grow line-clamp-4">
+                      {product.description}
+                    </p>
+                    <Link href={`${product.id}`}>
+                      <button className="flex items-center gap-2 text-sm font-semibold underline hover:text-green-200 transition group">
+                        Learn More 
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition" />
+                      </button>
+                    </Link>
+                  </div> */}
+
+            <div className="flex items-center justify-center gap-2 mt-6">
               <button
                 onClick={prev}
                 disabled={!canPrev}

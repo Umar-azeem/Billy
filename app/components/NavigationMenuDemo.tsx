@@ -117,7 +117,7 @@ const navLinks = [
   { href: "/", label: "Home", icon: Home },
   { href: "/about", label: "About", icon: Info },
   { href: "/tools", label: "Tools", icon: BookOpen },
-  { href: "/contact", label: "Contact", icon: Phone },
+  { href: "/contact-us", label: "Contact", icon: Phone },
 ];
 
 const mobileLoanLinks = loanPrograms.map((p) => ({
@@ -342,7 +342,7 @@ const mobileLoanLinks = loanPrograms.map((p) => ({
                 <Link href="/review">Reviews</Link>
               </NavigationMenuItem>
               <NavigationMenuItem className="text-white text-lg font-semibold rounded-xl transform duration-300 transition-all hover:bg-white/10 hover:-translate-y-1 px-6 py-2">
-                <Link href="/contact">Contact</Link>
+                <Link href="/contact-us">Contact</Link>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

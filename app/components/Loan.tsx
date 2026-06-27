@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 
-// Define types
 interface SocialIcon {
   id: string;
   src: string;
   alt: string;
-  url:string;
+  url: string;
 }
 
 const Loan: React.FC = () => {
@@ -15,35 +15,34 @@ const Loan: React.FC = () => {
       id: "facebook",
       src: "https://api.iconify.design/flowbite:facebook-solid.svg?color=%23000000",
       alt: "Facebook",
-      url:"https://facebook.com/BillyWatkinsMortgage",
+      url: "https://facebook.com/BillyWatkinsMortgage",
     },
     {
       id: "instagram",
       src: "https://api.iconify.design/famicons:logo-instagram.svg?color=%23000000",
       alt: "Instagram",
-      url:"https://instagram.com/BillyWatkinsMortgage",
+      url: "https://instagram.com/BillyWatkinsMortgage",
     },
     {
       id: "linkedin",
       src: "https://api.iconify.design/uim:linkedin-alt.svg?color=%23000000",
       alt: "LinkedIn",
-      url:"https://linkedin.com/in/BillyWatkinsMortgage",
+      url: "https://linkedin.com/in/BillyWatkinsMortgage",
     },
     {
       id: "google",
       src: "https://api.iconify.design/ion:logo-google.svg?color=%23000000",
       alt: "Google",
-      url: "https://share.google/58EeohLOQ10kKQ6Y2"
+      url: "https://share.google/58EeohLOQ10kKQ6Y2",
     },
   ];
 
   return (
     <section className="bg-[#f5f5f5] py-12 px-4 sm:py-16 sm:px-6">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-        {/* Left Content */}
         <div className="text-center lg:text-left">
           <p className="text-green-800 uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold mb-4 text-sm sm:text-base">
-            Let's Get Started!
+            Let{`'`}s Get Started!
           </p>
 
           <h1 className="text-3xl sm:text-4xl font-semibold leading-tight text-gray-900">
@@ -56,26 +55,22 @@ const Loan: React.FC = () => {
             specific needs and find the perfect home loan for you.
           </p>
 
-          <button
-            className="mt-8 sm:mt-10 inline-flex items-center gap-3 bg-[#006132] hover:bg-[#006132]/80 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold transition mx-auto lg:mx-0"
-            type="button"
-          >
-            <Image
-              src="/img/billyc.png"
-              alt="Calendar"
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
-            Schedule Intro Call
-          </button>
+          <Link href="/contact-us">
+            {" "}
+            <button
+              className="mt-8 sm:mt-10 inline-flex items-center gap-3 bg-[#006132] hover:bg-[#006132]/80 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold transition mx-auto lg:mx-0"
+              type="button"
+            >
+              Schedule Intro Call
+            </button>
+          </Link>
         </div>
-
+       
         <div className="flex flex-col justify-center mt-16 sm:mt-20 lg:mt-0">
           <div className="w-full relative ">
             <div className="w-full max-w-[500px] aspect-[4/5] h-[300px] bg-[#006132] rounded-[20px]" />
             <Image
-              src="/img/billyc.png"
+              src="/img/billyN.png"
               alt="Advisor"
               width={480}
               height={680}
