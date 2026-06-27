@@ -133,7 +133,7 @@ const LoanProductsCarousel: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const totalPages = Math.ceil(loanProducts.length / itemsPerView);
+  const totalPages = Math.ceil(loanProducts.length / itemsPerView + 1);
   const canPrev = currentIndex > 0;
   const canNext = currentIndex < totalPages - 1;
 
@@ -180,63 +180,44 @@ const LoanProductsCarousel: React.FC = () => {
           </div>
           <div className="w-full lg:w-[650px] ">
             <div className="overflow-hidden ">
-              <div className="flex gap-5">
-                {getVisibleItems().map((product) => (
-                  <div
-                    key={product.id}
-                    className="min-w-[200px] h-[260px] md:min-w-[250px] md:h-[300px]  border-t-10 border-black bg-[#006132] text-white rounded-b-3xl p-4 md:p-6  flex flex-col justify-between flex-shrink-0"
-                  >
-                    <div className="flex items-center  ">
-                      <img
-                        className="w-20 h-20 object-contain"
-                        src="/img/logo.png"
-                        alt="logo"
-                      />
-                      
-                    </div>
-
-                    <h2 className=" text-3xl font-bold max-w-[200px]  md:max-w-[240px]">
-                     {product.title}
-                    </h2>
-
-                    <Link href={`${product.id}`}>
-                      <button className="flex items-center gap-2 text-sm font-semibold underline hover:text-green-200 transition group">
-                        Learn More
-                        <ArrowRight
-                          size={16}
-                          className="group-hover:translate-x-1 transition"
+              <div
+                className="flex gap-6 transition-transform duration-500"
+                style={{
+                  transform: `translateX(-${currentIndex * (260 + 24)}px)`,
+                }}
+              >
+                {loanProducts.map(
+                  (
+                    product, 
+                  ) => (
+                    <div
+                      key={product.id}
+                      className="min-w-[260px] h-[260px] md:min-w-[250px] md:h-[300px] border-t-10 border-black bg-[#006132] text-white rounded-b-3xl p-5 md:p-6 flex flex-col justify-between flex-shrink-0"
+                    >
+                      <div className="flex items-center">
+                        <img
+                          className="w-20 h-20 object-contain"
+                          src="/img/logo.png"
+                          alt="logo"
                         />
-                      </button>
-                    </Link>
-                  </div>
-                ))}
+                      </div>
+                      <h2 className="text-3xl font-bold max-w-[200px] md:max-w-[240px]">
+                        {product.title}
+                      </h2>
+                      <Link href={`${product.id}`}>
+                        <button className="flex items-center gap-2 text-sm font-semibold underline hover:text-green-200 transition group">
+                          Learn More
+                          <ArrowRight
+                            size={16}
+                            className="group-hover:translate-x-1 transition"
+                          />
+                        </button>
+                      </Link>
+                    </div>
+                  ),
+                )}
               </div>
             </div>
-
-            {/* <div
-                    key={product.id}
-                    className="bg-[#006132]  text-white rounded-3xl p-6 flex flex-col flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] min-h-[280px]"
-                  >
-                    <div className="text-white mb-4">
-                      <div className="bg-white/20 rounded-full p-3 inline-block">
-                        {product.icon} 
-                      </div>
-                    </div>
-
-                    <h3 className="text-lg font-bold mb-2 line-clamp-2">
-                      {product.title}
-                    </h3>
-
-                    <p className="text-sm text-white/90 mb-4 flex-grow line-clamp-4">
-                      {product.description}
-                    </p>
-                    <Link href={`${product.id}`}>
-                      <button className="flex items-center gap-2 text-sm font-semibold underline hover:text-green-200 transition group">
-                        Learn More 
-                        <ArrowRight size={16} className="group-hover:translate-x-1 transition" />
-                      </button>
-                    </Link>
-                  </div> */}
 
             <div className="flex items-center justify-center gap-2 mt-6">
               <button

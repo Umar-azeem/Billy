@@ -65,10 +65,19 @@ const Loan: React.FC = () => {
             </button>
           </Link>
         </div>
-       
+
         <div className="flex flex-col justify-center mt-16 sm:mt-20 lg:mt-0">
           <div className="w-full relative ">
-            <div className="w-full max-w-[500px] aspect-[4/5] h-[300px] bg-[#006132] rounded-[20px]" />
+            <div className="flex absolute flex-col items-end gap-1.5 top-36 left-52">
+                  <div className="flex flex-col items-start gap-1 ">
+                  <div className="h-4 w-4 bg-white rounded-full" />
+                  <div className="h-3 w-3 bg-white rounded-full" />
+                  <div className="h-2 w-2 bg-white rounded-full" />
+                  <div className="h-1 w-1 bg-white rounded-full" />
+
+                </div>
+              </div>
+            <div className="w-full max-w-[500px] aspect-[4/5] h-[350px] bg-[#006132] rounded-[20px]" />
             <Image
               src="/img/billyN.png"
               alt="Advisor"
@@ -78,7 +87,8 @@ const Loan: React.FC = () => {
               priority
               unoptimized
             />
-            <div className="md:hidden  absolute top-4 md:bottom-2 md:top-40 left-32 -translate-x-1/2 sm:left-20 sm:translate-x-0  sm:top-1/2 sm:-translate-y-1/2 bg-white rounded-[24px] sm:rounded-[30px] border-white shadow-4xl p-5 sm:p-8 w-[68%] sm:w-[300px]">
+            <div className="md:hidden  absolute top-6 md:bottom-1 md:top-40 left-42 -translate-x-1/2 sm:left-20 sm:translate-x-0  sm:top-1/2 sm:-translate-y-1/2 bg-white rounded-[24px] sm:rounded-[30px] border-white shadow-4xl p-5 sm:p-8 w-[68%] sm:w-[300px]">
+              
               <h3 className="text-lg sm:text-xl font-bold text-black">
                 Billy Watkins
               </h3>
